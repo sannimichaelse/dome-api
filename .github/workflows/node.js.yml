@@ -45,9 +45,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         password: ${{ secrets.SSH_PASSWORD }} 
         script: |
-          cd projects/pdf-gen
+          cd projects/dome-api
           git pull origin master
-          sudo -S <<< ${{ secrets.USER_PASSWORD }} npm run build
-          cd build
-          sudo -S <<< ${{ secrets.USER_PASSWORD }} mkdir certificates
-          pm2 restart pdf-gen
+          npm run build
+          pm2 restart dome-api
