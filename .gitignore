@@ -1,0 +1,6 @@
+node_modules
+build
+logs
+.idea
+.env
+.DS_Store

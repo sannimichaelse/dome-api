@@ -1,0 +1,18 @@
+{
+    "apps": [
+      {
+        "name":         "dome-api",
+        "script":       "build/index.js",
+        "env":          {
+          "production": true,
+          "NODE_PATH":  "build"
+        },
+        "kill_timeout": 600000,
+        "min_uptime": "30000",
+        "max_restarts": 5,
+        "autorestart": true,
+        "watch": true
+      }
+    ]
+  }
+  
