@@ -29,7 +29,7 @@ jobs:
         npm test
       env:
         CI: true
-        DATABASE_TEST: 'mongodb+srv://test:oVrEfKpNNr7EX5BJ@pdfconvert-test.agal4.mongodb.net/pdfconvert_test?retryWrites=true&w=majority'
+        DATABASE_TEST: ${{ secrets.DATABASE_TEST_URL }}
 
   deploy:
     needs: [test]
